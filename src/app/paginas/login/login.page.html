@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-card>
+    <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Open_Source_Initiative_keyhole.svg/1200px-Open_Source_Initiative_keyhole.svg.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Bienvenido</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="stacked">Usuario</ion-label>
+          <ion-input formControlName="username" placeholder="Ingresa tu usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" placeholder="Ingresa tu contraseña"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Recordarme</ion-label>
+          <ion-toggle [checked]="true"></ion-toggle>
+        </ion-item>
+        <ion-button expand="full" shape="round" (click)="ingresar()" [routerLink]="['/perfil']" [queryParams]="{image: 'https://robohash.org/autquiaut.png', gender: 'female', firstName: 'JEANNE', lastName: 'HALVORSON', username: 'KMINCHELLE', email: 'kminchelle@qq.com' }">Iniciar sesiòn</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

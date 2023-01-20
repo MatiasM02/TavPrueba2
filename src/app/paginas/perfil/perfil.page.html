@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Bienvenido</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-button [routerLink]="['/']" fill="clear"><ion-icon name="chevron-back-outline"></ion-icon>Salir</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="{{image}}">
+    <ion-card-content>
+      <ion-label>
+        <ion-badge color="primary">
+          <p>{{gender}}</p>
+        </ion-badge>
+      </ion-label>
+      <ion-label>
+        <h2>{{firstName}} {{lastName}}</h2>
+        <h3>{{username}}</h3>
+      </ion-label>
+      <hr>
+      <ion-label>
+        <p>Contacto:</p>
+        <p>{{email}}</p>
+      </ion-label>
+      <hr>
+      <ion-button expand="block" fill="clear" [routerLink]="['/catalogo']">Ir a Catalogo</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
